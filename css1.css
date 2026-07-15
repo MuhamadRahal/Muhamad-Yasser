@@ -1,0 +1,360 @@
+/* ------------------------------------------------------------- */
+/* 1. تصفير المسافات الأساسي وتنسيق الـ Layout */
+/* ------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(234, 218, 238); /* خلفية مريحة للعين ومتناسقة مع درجات البنفسجي */
+    padding-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333; /* خليت لون النص الأساسي غامق لأن الخلفية فاتحة عشان يظهر بوضوح */
+}
+
+/* ------------------------------------------------------------- */
+/* 2. 🧭 تنسيق شريط التنقل (Navbar) */
+/* ------------------------------------------------------------- */
+.navbar {
+    background-color: rgb(74, 20, 91);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 75%;
+    height: auto;
+    margin: 20px auto auto auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    position: sticky; 
+    top: 20px;
+    z-index: 100;
+}
+
+.navbar a {
+    color: #c8bfca;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 7px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    display: inline-block; 
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #ffffff;
+    background-color: rgb(173, 7, 171);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        width: 95%; 
+        padding: 10px; 
+        flex-wrap: wrap; 
+        gap: 8px; 
+    }
+
+    .navbar a {
+        padding: 6px 12px; 
+        font-size: 14px; 
+    }
+}
+
+/* ------------------------------------------------------------- */
+/* 3. 📝 العناوين والهيدر */
+/* ------------------------------------------------------------- */
+header {
+    text-align: center;
+    margin: 40px 0;
+    color: rgb(74, 20, 91); /* تلوين الهيدر ليتناسق مع التصميم */
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: rgba(0, 0, 0, 0.73);
+    font-size: 22px;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------- */
+/* 4. 🧱 تنظيم الكروت الكبيرة في الصفحات */
+/* ------------------------------------------------------------- */
+.section-card {
+    background-color: rgb(255, 255, 255); /* خلفية بيضاء للكروت لراحة العين والتباين */
+    width: 70%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(121, 5, 167, 0.15);
+    border: 1px solid rgba(173, 7, 171, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0px 15px 30px rgba(121, 5, 167, 0.25);
+}
+
+.section-cards {
+    display: block;
+    background-color: #f7ebfc;
+    border: 1px solid rgb(173, 7, 171);
+    color: rgb(74, 20, 91);
+    border-radius: 20px;
+    text-align: center;
+    margin: 24px auto;
+    width: 70%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.section-cards p {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#imp {
+    background-color: rgb(74, 20, 91);
+    color: #ffffff;
+    width: 140px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#h3 {
+    background-color: rgb(50, 9, 63);
+    color: white;
+    width: 60%;
+    max-width: 400px;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#h3 h3 {
+    color: white;
+}
+
+/* ------------------------------------------------------------- */
+/* 5. 📸 حل مشكلة الصور وتنسيق الميديا السليم */
+/* ------------------------------------------------------------- */
+.media-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* تضمن نزول الصور تحت بعضها في الشاشات الصغيرة */
+    margin: 20px 0;
+}
+
+.works
+{
+    background: 
+    linear-gradient(to right,rgba(82, 12, 101, 0.537) , #ffffff21 ),
+    url('Screenshot\ 2026-07-15\ 051820.png');
+    width: 90%;
+    height: 500px;
+    background-position: center top;
+}
+.works:hover
+{
+    background-image: linear-gradient(to right ,rgba(81, 12, 101, 0) ,  transition)
+    url'Screenshot\ 2026-07-15\ 051820.png'()
+    ;
+    opacity: 0.9;
+    transition: 0.4s ease;
+    transform: scale(1.02);
+}
+
+/* الصورة في الهوم */
+#img-gemi img {
+    width: 100%;
+    max-width: 250px; /* تحجيم صورة البروفايل الشخصية لتبدو ممتازة */
+    height: 250px;
+    object-fit: cover; /* تحافظ على أبعاد الصورة بدون مط */
+    position: center center;
+    border-radius: 45%; /* شكل دائري رائع جداً لصور الـ About Me */
+    border: 4px solid rgb(173, 7, 171);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* صور الشهادات */
+.media-container img {
+    width: 100%;
+    max-width: 240px; /* جعل كروت الشهادات متناسقة وبحجم مناسب جداً للاب والتابلت */
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid rgb(173, 7, 171);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.media-container img:hover {
+    transform: scale(1.05); /* تكبير بسيط وجميل للشهادة عند مرور الماوس */
+}
+
+.bio-text {
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #555555;
+    font-size: 17px;
+}
+
+/* ------------------------------------------------------------- */
+/* 6. 🛠️ قسم المهارات الجديد (البديل المفيد والذكي للفورم) */
+/* ------------------------------------------------------------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.skill-tag {
+    background-color: #f1e6f5;
+    color: rgb(74, 20, 91);
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(173, 7, 171, 0.2);
+}
+
+.skill-tag:hover {
+    background-color: rgb(173, 7, 171);
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+/* ------------------------------------------------------------- */
+/* 7. 🌐 أزرار السوشيال ميديا الجديدة */
+/* ------------------------------------------------------------- */
+/* 🌐 تعديل حاوية أزرار السوشيال ميديا */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* قللنا المسافة شوية عشان نكسب مساحة */
+    flex-wrap: wrap; /* عشان لو الشاشة صغرت جداً ينزلوا بنظام */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* 🔘 زرار السوشيال ميديا بعد تعديل خواص الانكماش والمساحة */
+.social-btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 16px; /* قللنا الـ padding الجانبي من 25 لـ 16 عشان الزرار يلم نفسه ويقعد جنب إخواته */
+    border-radius: 20px;
+    font-size: 13px; /* صغرنا الخط سنة بسيطة جداً عشان الـ Fit */
+    font-weight: bold;
+    transition: 0.3s ease;
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; 
+    
+    /* 👈 السطرين دول بيمنعوا الزرار إنه يتشوه أو ينكمش كلامه */
+    flex-shrink: 1; 
+    white-space: nowrap; 
+}
+
+.facebook { background-color: #1877f2;}
+.facebook:hover { background-color: #145dbf; }
+
+.Instgram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+.Instgram:hover { opacity: 0.8; }
+
+.whatsapp { background-color: #25d366; }
+.whatsapp:hover { background-color: #1ebd56; }
+
+.Github{ background-color: rgba(0, 0, 0, 0.87);}
+.Github:hover{ background-color: rgb(0, 0, 0);}
+
+/* ------------------------------------------------------------- */
+/* 9. 🚀 كارت "مشاريع قادمة" */
+/* ------------------------------------------------------------- */
+
+#sec-work
+{
+    width: 100%;
+}
+
+.project-tech span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a33be8;
+    margin: 12px 10px;
+    border-radius: 10px;
+    padding: 4px;
+}
+.project-links span
+{
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(to right,rgba(128, 0, 128, 0.594),rgba(255, 0, 0, 0.55),rgba(0, 0, 255, 0.518));
+    text-decoration: none;
+    margin: 7px auto;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 14px;
+}
+
+.project-links span:hover , .project-tech span:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .4s ease;
+}
+
+.single-project-img-wrapper img
+{
+ background: 
+    linear-gradient(to right,rgba(82, 12, 101, 0.537) , #ffffff21 ),
+    url('Screenshot\ 2026-07-15\ 051820.png');
+    width: 100%;
+    aspect-ratio: 16 / 6;   /* بدل height: 500px الثابت */
+    background-position: center top;
+    background-size: cover;
+    border: 3px solid rgb(237, 108, 222);
+    border-radius: 10px;
+}
+
+#h33,#h33::after
+{
+    content: ' :';
+    margin-top:15px;
+}
+
+.coming-soon-card {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7ebfc;
+    border: 2px dashed rgba(173, 7, 171, 0.4);
+    border-radius: 15px;
+    color: rgb(74, 20, 91);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.coming-soon-card:hover {
+    background-color: #f1e0f7;
+    border-color: rgb(173, 7, 171);
+}
