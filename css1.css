@@ -358,3 +358,29 @@ h3 {
     background-color: #f1e0f7;
     border-color: rgb(173, 7, 171);
 }
+@media screen and (max-width: 600px) {
+    
+    /* حل مشكلة الكلمة الساقطة في الناف بار */
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important; /* نضمن إنهم في سطر واحد */
+        justify-content: space-around !important; /* توزيع متساوي للكلمات */
+        gap: 4px !important; /* تقليص المسافة بين الكلمات لأقل حد */
+        padding: 10px 6px !important;
+    }
+
+    .navbar a {
+        font-size: 14px !important; /* صغر الخط سنة كمان عشان يفرشوا في سطر واحد */
+        padding: 5px 8px !important; /* تقليل المساحة المحيطة بالكلمة */
+        white-space: nowrap !important; /* 👈 السطر ده سحري! بيمنع أي كلمة إنها تنزل سطر جديد مهما حصل */
+    }
+
+    /* حل مشكلة الصورة الصغيرة للشهادات والأعمال */
+    .section-card img { 
+        width: 100% !important; /* إجبار الصورة تاخد عرض الشاشة كلها */
+        height: auto !important;
+        max-width: 100% !important; /* تلغي أي تحديد قديم كان صاغصغرها */
+        display: block !important;
+        margin: 0 auto 15px auto !important;
+    }
+}
