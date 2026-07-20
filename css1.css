@@ -358,6 +358,7 @@ h3 {
     background-color: #f1e0f7;
     border-color: rgb(173, 7, 171);
 }
+
 @media screen and (max-width: 600px) {
     
     /* حل مشكلة الكلمة الساقطة في الناف بار */
